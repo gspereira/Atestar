@@ -71,12 +71,12 @@
                             <div class="row">
                                 <div class="col-md-9 first-item">
                                     <fieldset>
-                                        <input name="name" type="text" class="form-control" id="name" placeholder="Digite aqui o código do atestado..." required="">
+                                        <input name="cod" type="text" class="form-control" id="cod" placeholder="Digite aqui o código do atestado..." required="">
                                     </fieldset>
                                 </div>
                                 <div class="col-md-3">
                                     <fieldset>
-                                        <a class="scrollTo" data-scrollTo="popular" href="#"><button type="submit" id="form-submit" class="btn">Verificar</button></a>
+                                        <a class="scrollTo" data-scrollTo="consulta" href="consulta" onclick="consultar()"><button type="submit" id="form-submit" class="btn">Verificar</button></a>
                                     </fieldset>
                                 </div>
                             </div>
@@ -87,6 +87,37 @@
         </div>
     </section>
 
+    <section id="consulta" class="featured-places" style="display: none;">
+        <div id="atestado" class="container" style="display: none;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <span>Consulta</span>
+                        <h2>Verifique o atestado consultado abaixo</h2>
+                    </div>
+                </div> 
+            </div> 
+			<div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+						<img src="http://papelariamedica.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/1/2110_1.jpg" style="width: 60%;">
+                    </div>
+                </div> 
+            </div> 
+        </div>
+		
+		<div id="error" class="container" style="display: none;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <span>Consulta</span>
+                        <h2>Desculpe, este código não corresponde à nenhum atestado cadastrado</h2>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+    </section>
+	
     <section class="popular-places" id="popular">
         <div class="container-fluid">
             <div class="row">
