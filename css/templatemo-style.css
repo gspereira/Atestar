@@ -6,6 +6,82 @@ http://www.templatemo.com/tm-522-venue
 
 */
 
+
+/*Atestado */
+#valido {
+	margin-left: 10px;
+	width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ADC8FD;
+    border-color: #4883ff;
+    border-top-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+}
+
+#atestado {
+	background-color: #EBF2FF;
+	border-color: #ADC8FD;
+    border-width: 2px;
+    border-style: solid;
+	padding: 20px;
+}
+
+#dadosMedico {
+	margin-top: 20px;
+}
+
+	#paciente, #medico {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		background-color: #FCFEFE;
+		margin-top: 20px;
+		text-align: center;
+		width: 200px;
+		height: 250px;
+	}
+
+		#fotoP {
+			width: 150px;
+		}
+		#cid, #especialidade {
+			background-color: #EBF2FF;
+			border-color: #ADC8FD;
+			border-width: 2px;
+			border-style: solid;
+			width: 150px;
+			margin-left: 25px;
+		}
+		
+	#dadosP, #dadosP2, #dadosM, #dadosM2{
+		margin-top: 20px;
+		padding: 30px;
+		text-align: left;
+		background-color: #F5FFFA;
+		width: 448px;
+		height: 250px;
+	}
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
 body {
   font-family: 'Raleway', 'sans-serif';
   background-color: #fff;
@@ -472,15 +548,13 @@ section.banner {
   width: 100%;
   overflow: hidden;
   z-index: 1;
-  border-radius: 50%;
-  min-height: 259px;
-  max-height: 259px;
+  border-radius: 5px;
 }
 
 .popular-places .popular-item .thumb .text-content {
   position: absolute;
-  bottom: 35px;
-  left: 65px;
+  bottom: 20px;
+  left: 20px;
   z-index: 9;
   color: #fff;
   text-shadow: 2px 2px #4883ff;
@@ -499,6 +573,30 @@ section.banner {
   font-weight: 300;
   letter-spacing: 0.5px;
   display: block;
+}
+
+.popular-places .popular-item .thumb .plus-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9;
+}
+
+
+.popular-places .popular-item .thumb .plus-button i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.popular-places .popular-item .thumb .plus-button i:hover {
+  background-color: rgba(250,250,250,0.3);
 }
 
 
