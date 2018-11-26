@@ -165,7 +165,7 @@
         <div class="col-md-12">
             <div class="section-heading">
                 <span>Consulta</span>
-                <h2>Desculpe, Este atestado não existe em nossa base de dados :(</h2>
+                <h2>Desculpe, este atestado não existe em nossa base de dados :(</h2>
             </div>
         </div> 
     </div> 
@@ -187,26 +187,8 @@
                 <div class="thumb">
                     <img src="img/team/fernando.jpg" alt="">
                     <div class="text-content">
-                        <h4>Fernando</h4>
-                        <span>Backend</span>
-                    </div>
-                </div>
-            </div>
-            <div class="item popular-item">
-                <div class="thumb">
-                    <img src="img/team/felipe.jpg" alt="">
-                    <div class="text-content">
-                        <h4>Felipe Assunção</h4>
-                        <span>Backend</span>
-                    </div>
-                </div>
-            </div>
-            <div class="item popular-item">
-                <div class="thumb">
-                    <img src="img/team/iago.jpg" alt="">
-                    <div class="text-content">
-                        <h4>Iago Lacerda</h4>
-                        <span>Documentação</span>
+                        <h4>Fernando Corrêa</h4>
+                        <span>Dev</span>
                     </div>
                 </div>
             </div>
@@ -215,11 +197,46 @@
                     <img src="img/team/gustavo.jpg" alt="">
                     <div class="text-content">
                         <h4>Gustavo Pereira</h4>
-                        <span>Frontend</span>
+                        <span>Dev</span>
                     </div>
                 </div>
             </div>
-
+			<div class="item popular-item">
+                <div class="thumb">
+                    <img src="img/team/mateus.jpg" alt="">
+                    <div class="text-content">
+                        <h4>Mateus Zuffo</h4>
+                        <span>Dev</span>
+                    </div>
+                </div>
+            </div>
+			<div class="item popular-item">
+                <div class="thumb">
+                    <img src="img/team/samuel.jpg" alt="">
+                    <div class="text-content">
+                        <h4>Samuel Cleto</h4>
+                        <span>Dev</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item popular-item">
+                <div class="thumb">
+                    <img src="img/team/felipe.jpg" alt="">
+                    <div class="text-content">
+                        <h4>Felipe Assunção</h4>
+                        <span>Doc</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item popular-item">
+                <div class="thumb">
+                    <img src="img/team/iago.jpg" alt="">
+                    <div class="text-content">
+                        <h4>Iago Lacerda</h4>
+                        <span>Doc</span>
+                    </div>
+                </div>
+            </div>
             <div class="item popular-item">
                 <div class="thumb">
                     <img src="img/team/filipe.jpg" alt="">
@@ -384,9 +401,12 @@
 								   var radios = document.getElementsByName('periodoPlano');
 										for (var i = 0, length = radios.length; i < length; i++){
 											if (radios[0].checked){
-												desconto= 5*chaves/2;
-												total = 30*chaves;
-												total = total-total*(desconto/100)+60;
+												if(chaves > 1){
+													desconto = 29.99*(0.05*(chaves-1));
+												}else{
+													desconto = 0;
+												}
+												total = (29.99-desconto)*chaves;
 												if(checa.checked){
 													document.getElementById("Valor").value = "Consultoria Necessária";
 												}
@@ -397,9 +417,12 @@
 											}
 											if (radios[1].checked){
 												// do whatever you want with the checked radio
-													desconto= 5*chaves/2;
-												total = 153*chaves;
-												total = total-total*(desconto/100)+306;
+												if(chaves > 1){
+													desconto = 29.99*(0.05*(chaves-1));
+												}else{
+													desconto = 0;
+												}
+												total = ((29.99-desconto)*chaves)*6*0.85;
 												if(checa.checked){
 													document.getElementById("Valor").value = "Consultoria Necessária";
 												}
@@ -410,9 +433,12 @@
 											}
 											if (radios[2].checked){
 												// do whatever you want with the checked radio
-												desconto= 5*chaves/2;
-												total = 270*chaves;
-												total = total-total*(desconto/100)+540;
+												if(chaves > 1){
+													desconto = 29.99*(0.05*(chaves-1));
+												}else{
+													desconto = 0;
+												}
+												total = ((29.99-desconto)*chaves)*12*0.75;
 												if(checa.checked){
 													document.getElementById("Valor").value = "Consultoria Necessária";
 												}

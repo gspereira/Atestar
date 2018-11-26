@@ -7,7 +7,7 @@ http://www.templatemo.com/tm-522-venue
 */
 
 
-/*Atestado */
+/*Atestado */  
 #valido {
 	margin-left: 10px;
 	width: 300px;
@@ -549,8 +549,7 @@ section.banner {
   overflow: hidden;
   z-index: 1;
   border-radius: 50%;
-  min-height: 259px;
-  max-height: 259px;
+  height: 240px;
 }
 
 .popular-places .popular-item .thumb .text-content {
