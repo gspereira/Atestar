@@ -266,19 +266,19 @@
                             <ul class="accordion">
                                 <li>
                                     <a>Intuito do projeto</a>
-                                    <p>"Intuito"</p>
+                                    <p>Simplificar o tramite de um documento medico importante conhecido como Atestado Medico.</p>
                                 </li>
                                 <li>
                                     <a>Aplicações</a>
-                                    <p>"Aplicações"</p>
+                                    <p>Facilita o transporte do documento, além de evitar perdas e falsificações.</p>
                                 </li>
                                 <li>
-                                    <a>Novos mercados</a>
-                                    <p>"Novos mercados"</p>
+                                    <a>Mercados</a>
+                                    <p>Pretendemos atuar tanto no setor publico quanto no privado para garantir uma homogeneidade de padrões em todo âmbito hospitalar-medico.</p>
                                 </li>
                                 <li>
-
-                                    <a><button class="modal-btn" data-toggle="modal" data-target="#myModal">Contratar Serviços</button></a>
+									<a>Como nos contratar</a>
+                                    <p><button class="modal-btn" data-toggle="modal" data-target="#myModal">Contratar Serviços</button></p>
                                     <!-- Modal -->
 
                                     <div class="modal" tabindex="-1" id="myModal" >
@@ -330,15 +330,15 @@
                                          <label for="periodo">Escolha um periodo</label>
                                          <div class="form row" id="periodo">
                                            <div class="form-group col-md-3">
-                                              <input class="form-check-input" type="radio" name="periodoPlano" id="plano1" value="option1" checked>
+                                              <input class="form-check-input" type="radio" name="periodoPlano" id="plano1" value="1" checked>
                                               <label class="form-check-label" for="exampleRadios1">Mensal</label>
                                           </div>
                                           <div class="form-group col-md-3">
-                                              <input class="form-check-input" type="radio" name="periodoPlano" id="plano2" value="option2">
+                                              <input class="form-check-input" type="radio" name="periodoPlano" id="plano2" value="2">
                                               <label class="form-check-label" for="exampleRadios1">Semestral</label>
                                           </div>
                                           <div class="form-group col-md-3">
-                                              <input class="form-check-input" type="radio" name="periodoPlano" id="plano3" value="option3">
+                                              <input class="form-check-input" type="radio" name="periodoPlano" id="plano3" value="3">
                                               <label class="form-check-label" for="exampleRadios1">Anual</label>
                                           </div>
                                       </div>
@@ -377,18 +377,75 @@
                             <div class="form-row">
                                <script>
                                    function calc(){
-
-                                   }
-                               </script>
-                               <div class="form-group col-md-2">
-                                  <button  type="button" class="modal-btn" onclick="calc()">Calcular</button>
-                              </div>
-                              <div class="form-group col-md-4">
-                                  <input type="text" class="form-control" id="Valor" placeholder="Valor" disabled>
-                              </div>
-                          </div>
-                      </form>
-                      <button type="button" class="btn btn-success" data-dismiss="modal">Confirmar</button>
+								   var checa = document.getElementById("maior");					   
+								   var total;
+								   var desconto;
+								   var chaves = document.getElementById("myRange").value;
+								   var radios = document.getElementsByName('periodoPlano');
+										for (var i = 0, length = radios.length; i < length; i++){
+											if (radios[0].checked){
+												desconto= 5*chaves/2;
+												total = 30*chaves;
+												total = total-total*(desconto/100)+60;
+												if(checa.checked){
+													document.getElementById("Valor").value = "Consultoria Necessária";
+												}
+												else{
+												document.getElementById("Valor").value = total;
+												}
+											break;
+											}
+											if (radios[1].checked){
+												// do whatever you want with the checked radio
+													desconto= 5*chaves/2;
+												total = 153*chaves;
+												total = total-total*(desconto/100)+306;
+												if(checa.checked){
+													document.getElementById("Valor").value = "Consultoria Necessária";
+												}
+												else{
+												document.getElementById("Valor").value = total;
+												}
+											break;
+											}
+											if (radios[2].checked){
+												// do whatever you want with the checked radio
+												desconto= 5*chaves/2;
+												total = 270*chaves;
+												total = total-total*(desconto/100)+540;
+												if(checa.checked){
+													document.getElementById("Valor").value = "Consultoria Necessária";
+												}
+												else{
+												document.getElementById("Valor").value = total;
+												}
+											break;
+											}
+										}						   
+									
+									}
+								</script>
+								<div class="form-group col-md-2">
+									<button  type="button" class="modal-btn" onclick="calc()">Calcular</button>
+								</div>
+								<div class="form-group col-md-4">
+									<input type="text" class="form-control" id="Valor" placeholder="Valor" disabled>
+								</div>
+							</div>
+						</form>
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Confirmar</button>
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-body">
+									<p>Requisição recebida, entraremos em contato para mais informações.</p>
+									<button type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
+									</div>
+								</div>
+							</div>
+						</div>
                       <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                   </div>
                   <!-- /Modal footer -->
